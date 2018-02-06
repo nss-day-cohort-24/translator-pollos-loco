@@ -13,8 +13,20 @@ var greetingEnglish = new Phrase("Happy", "President's", "Day");
 
 var greetingPhrase = document.getElementById("greeting");
 
+var userInput = document.getElementById("userInput");
+// if (userInput.value === "Happy President's Day") {
+//     console.log("success")
+// }
+// else {
+//     console.log("failure");
+// }
+
 function checkSelection(e) {
     e.preventDefault();
+    if (userInput.value === "Happy President's Day") {
+        console.log("success")
+    
+
 
     switch(document.getElementById("language").value) {
         case "spanish" :
@@ -51,6 +63,10 @@ function checkSelection(e) {
                 greetingPhrase.innerHTML += greetingEnglish[key] + " ";
             }
             break;    
+    }
+
+    } else {
+        greetingPhrase.innerHTML = "Enter Something";
     }
 }
 
