@@ -3,15 +3,15 @@
 console.log("Hello main.js");
 
 let translateToChinese = require("./chinese");
-// Brittany,
-// Hayden,
-// Jeremy
+let translateToSpanish = require("./");
+let translateToArabic = require("./");
+let translateToJapanese = require("./");
 
 let translator = {
-  translateToChinese
-  // Brittany,
-  // Hayden,
-  // Jeremy
+  translateToChinese,
+  translateToSpanish,
+  translateToArabic,
+  translateToJapanese
 };
 
 console.log(translator.translateToChinese());

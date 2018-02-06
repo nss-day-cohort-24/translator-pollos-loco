@@ -41,3 +41,15 @@
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+input {
+  display:block;
+  height: 200px;
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+#translator {
+  width: 400px;
+}

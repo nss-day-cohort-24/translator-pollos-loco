@@ -6,14 +6,18 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-  <div class="dropdown">
-  <button onclick="dropDown()" class="dropbtn">Choose Language</button>
-  <div id="whichLang" class="dropdown-content">
-    <a href="#">Chinese</a>
-    <a href="#">Spanish</a>
-    <a href="#">French</a>
+  <div id="translator">
+    <input type="text">
+    <div class="dropdown">
+    <button onclick="dropDown()" class="dropbtn">Choose Language</button>
+      <div id="whichLang" class="dropdown-content">
+        <a href="#">Chinese</a>
+        <a href="#">Spanish</a>
+        <a href="#">French</a>
+      </div>
+    <button class="dropbtn">Translate</button>
+    </div>
   </div>
-</div>
   <script src="dist/app.js"></script>
 </body>
 </html>

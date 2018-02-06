@@ -39,4 +39,14 @@
 .show {
   display: block; }
 
+input {
+  display: block;
+  height: 200px;
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 20px; }
+
+#translator {
+  width: 400px; }
+
 /*# sourceMappingURL=styles.css.map */
