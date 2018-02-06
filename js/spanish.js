@@ -1,3 +1,4 @@
+"use strict";
 
 function Phrase(happy, presidents, day) {
     this.happy = happy;
@@ -24,14 +25,14 @@ var userInput = document.getElementById("userInput");
 function checkSelection(e) {
     e.preventDefault();
     if (userInput.value === "Happy President's Day") {
-        console.log("success")
+        console.log("success");
     
 
 
     switch(document.getElementById("language").value) {
         case "spanish" :
             greetingPhrase.innerHTML = "";
-            for (key in greetingSpanish) {
+            for (var key in greetingSpanish) {
                 greetingPhrase.innerHTML += greetingSpanish[key] + " ";
             }
             break;
@@ -71,3 +72,6 @@ function checkSelection(e) {
 }
 
 document.getElementById("submit-btn").addEventListener("click", checkSelection);
+
+
+// console.log(add(2, 4));
