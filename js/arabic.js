@@ -10,55 +10,18 @@ var greetingPhrase = document.getElementById("greeting");
 
 var userInput = document.getElementById("userInput");
 
-var greetingSpanish = new Phrase("Feliz", "Presidente", "Dia");
+var greetingArabic = new Phrase("السعيدة", "الرئيس", "يوم");
 
 // console.log("work thanks");
-function translateSpanish(e){      
+function translateArabic(e){      
 console.log("success");
 var   greetingPhrase = "";
-                for (var key in greetingSpanish) {
-                    greetingPhrase += greetingSpanish[key] + " ";
+                for (var key in greetingArabic) {
+                    greetingPhrase += greetingArabic[key] + " ";
                 }
                 return greetingPhrase;  
             }        
         
 var test = "test";
-var spanishTranslation = translateSpanish();
-module.exports = spanishTranslation;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var arabicTranslation = translateArabic();
+module.exports = arabicTranslation;

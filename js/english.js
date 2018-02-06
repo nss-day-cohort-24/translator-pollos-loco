@@ -10,55 +10,18 @@ var greetingPhrase = document.getElementById("greeting");
 
 var userInput = document.getElementById("userInput");
 
-var greetingSpanish = new Phrase("Feliz", "Presidente", "Dia");
+var greetingEnglish = new Phrase("Happy", "President's", "Day");
 
 // console.log("work thanks");
-function translateSpanish(e){      
+function translateEnglish(e){      
 console.log("success");
 var   greetingPhrase = "";
-                for (var key in greetingSpanish) {
-                    greetingPhrase += greetingSpanish[key] + " ";
+                for (var key in greetingEnglish) {
+                    greetingPhrase += greetingEnglish[key] + " ";
                 }
                 return greetingPhrase;  
             }        
         
 var test = "test";
-var spanishTranslation = translateSpanish();
-module.exports = spanishTranslation;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var englishTranslation = translateEnglish();
+module.exports = englishTranslation;

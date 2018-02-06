@@ -2,20 +2,24 @@
 
 console.log("Hell main.js");
 
-// let translateToChinese = require("./chinese");
+let translateToChinese = require("./chinese");
 let translateToSpanish = require("./spanish");
-// let translateToArabic = require("./");
+let translateToArabic = require("./arabic");
 let translateToJapanese = require("./japanese");
+let translateToEnglish = require("./english");
 
 let translator = {
-  // translateToChinese,
+  translateToChinese,
   translateToSpanish,
-  // translateToArabic,
-  translateToJapanese
+  translateToArabic,
+  translateToJapanese,
+  translateToEnglish
 };
 
 console.log(translateToJapanese);
-
+console.log(translateToSpanish);
+console.log(translateToChinese);
+console.log(translateToArabic);
 // console.log(translator.translateToChinese());
 
 // function dropDown() {
@@ -42,11 +46,8 @@ function Phrase(happy, presidents, day) {
     this.day = day;
 }
 
-var greetingSpanish = new Phrase("Feliz", "Presidente", "Dia");
-var greetingChinese = new Phrase("快乐", "总统", "天");
-var greetingArabic = new Phrase("السعيدة", "الرئيس", "يوم");
-// var greetingJapanese = new Phrase("ハッピー", "大統領の", "日");
-var greetingEnglish = new Phrase("Happy", "President's", "Day");
+
+
 
 var greetingPhrase = document.getElementById("greeting");
 
@@ -66,24 +67,15 @@ function checkSelection(e) {
        
     switch(document.getElementById("language").value) {
         case "spanish" :
-            greetingPhrase.innerHTML = "";
-            for (var key in greetingSpanish) {
-                greetingPhrase.innerHTML += greetingSpanish[key] + " ";
-            }
+        document.getElementById("greeting").innerHTML = translateToSpanish;
             break;
 
         case "chinese" :
-            greetingPhrase.innerHTML = "";
-            for (key in greetingChinese) {
-                greetingPhrase.innerHTML += greetingChinese[key] + " ";
-            }
+        document.getElementById("greeting").innerHTML = translateToChinese;
             break;
 
         case "arabic" :
-            greetingPhrase.innerHTML = "";
-            for (key in greetingArabic) {
-                greetingPhrase.innerHTML += greetingArabic[key] + " ";
-            }
+        document.getElementById("greeting").innerHTML = translateToArabic;
             break;
         
         case "japanese" :
@@ -91,10 +83,7 @@ function checkSelection(e) {
             break;
 
         case "english" :
-            greetingPhrase.innerHTML = "";
-            for (key in greetingEnglish) {
-                greetingPhrase.innerHTML += greetingEnglish[key] + " ";
-            }
+        document.getElementById("greeting").innerHTML = translateToEnglish;
             break;    
     }
 

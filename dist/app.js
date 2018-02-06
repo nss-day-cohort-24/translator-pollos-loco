@@ -11,6 +11,92 @@ var greetingPhrase = document.getElementById("greeting");
 
 var userInput = document.getElementById("userInput");
 
+var greetingArabic = new Phrase("السعيدة", "الرئيس", "يوم");
+
+// console.log("work thanks");
+function translateArabic(e){      
+console.log("success");
+var   greetingPhrase = "";
+                for (var key in greetingArabic) {
+                    greetingPhrase += greetingArabic[key] + " ";
+                }
+                return greetingPhrase;  
+            }        
+        
+var test = "test";
+var arabicTranslation = translateArabic();
+module.exports = arabicTranslation;
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+function Phrase(happy, presidents, day) {
+    this.happy = happy;
+    this.presidents = presidents;
+    this.day = day;
+}
+
+var greetingPhrase = document.getElementById("greeting");
+
+var userInput = document.getElementById("userInput");
+
+var greetingChinese = new Phrase("快乐", "总统", "天");
+
+// console.log("work thanks");
+function translateChinese(e){      
+console.log("success");
+var   greetingPhrase = "";
+                for (var key in greetingChinese) {
+                    greetingPhrase += greetingChinese[key] + " ";
+                }
+                return greetingPhrase;  
+            }        
+        
+var test = "test";
+var chineseTranslation = translateChinese();
+module.exports = chineseTranslation;
+
+},{}],3:[function(require,module,exports){
+"use strict";
+
+function Phrase(happy, presidents, day) {
+    this.happy = happy;
+    this.presidents = presidents;
+    this.day = day;
+}
+
+var greetingPhrase = document.getElementById("greeting");
+
+var userInput = document.getElementById("userInput");
+
+var greetingEnglish = new Phrase("Happy", "President's", "Day");
+
+// console.log("work thanks");
+function translateEnglish(e){      
+console.log("success");
+var   greetingPhrase = "";
+                for (var key in greetingEnglish) {
+                    greetingPhrase += greetingEnglish[key] + " ";
+                }
+                return greetingPhrase;  
+            }        
+        
+var test = "test";
+var englishTranslation = translateEnglish();
+module.exports = englishTranslation;
+},{}],4:[function(require,module,exports){
+"use strict";
+
+function Phrase(happy, presidents, day) {
+    this.happy = happy;
+    this.presidents = presidents;
+    this.day = day;
+}
+
+var greetingPhrase = document.getElementById("greeting");
+
+var userInput = document.getElementById("userInput");
+
 var greetingJapanese = new Phrase("ハッピー", "大統領の", "日");
 
 // console.log("work thanks");
@@ -28,25 +114,29 @@ var japaneseTranslation = translateJapanese();
 module.exports = japaneseTranslation;
 
 
-},{}],2:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 
 console.log("Hell main.js");
 
-// let translateToChinese = require("./chinese");
+let translateToChinese = require("./chinese");
 let translateToSpanish = require("./spanish");
-// let translateToArabic = require("./");
+let translateToArabic = require("./arabic");
 let translateToJapanese = require("./japanese");
+let translateToEnglish = require("./english");
 
 let translator = {
-  // translateToChinese,
+  translateToChinese,
   translateToSpanish,
-  // translateToArabic,
-  translateToJapanese
+  translateToArabic,
+  translateToJapanese,
+  translateToEnglish
 };
 
 console.log(translateToJapanese);
-
+console.log(translateToSpanish);
+console.log(translateToChinese);
+console.log(translateToArabic);
 // console.log(translator.translateToChinese());
 
 // function dropDown() {
@@ -73,11 +163,8 @@ function Phrase(happy, presidents, day) {
     this.day = day;
 }
 
-var greetingSpanish = new Phrase("Feliz", "Presidente", "Dia");
-var greetingChinese = new Phrase("快乐", "总统", "天");
-var greetingArabic = new Phrase("السعيدة", "الرئيس", "يوم");
-// var greetingJapanese = new Phrase("ハッピー", "大統領の", "日");
-var greetingEnglish = new Phrase("Happy", "President's", "Day");
+
+
 
 var greetingPhrase = document.getElementById("greeting");
 
@@ -97,24 +184,15 @@ function checkSelection(e) {
        
     switch(document.getElementById("language").value) {
         case "spanish" :
-            greetingPhrase.innerHTML = "";
-            for (var key in greetingSpanish) {
-                greetingPhrase.innerHTML += greetingSpanish[key] + " ";
-            }
+        document.getElementById("greeting").innerHTML = translateToSpanish;
             break;
 
         case "chinese" :
-            greetingPhrase.innerHTML = "";
-            for (key in greetingChinese) {
-                greetingPhrase.innerHTML += greetingChinese[key] + " ";
-            }
+        document.getElementById("greeting").innerHTML = translateToChinese;
             break;
 
         case "arabic" :
-            greetingPhrase.innerHTML = "";
-            for (key in greetingArabic) {
-                greetingPhrase.innerHTML += greetingArabic[key] + " ";
-            }
+        document.getElementById("greeting").innerHTML = translateToArabic;
             break;
         
         case "japanese" :
@@ -122,10 +200,7 @@ function checkSelection(e) {
             break;
 
         case "english" :
-            greetingPhrase.innerHTML = "";
-            for (key in greetingEnglish) {
-                greetingPhrase.innerHTML += greetingEnglish[key] + " ";
-            }
+        document.getElementById("greeting").innerHTML = translateToEnglish;
             break;    
     }
 
@@ -140,34 +215,34 @@ document.getElementById("submit-btn").addEventListener("click", checkSelection);
 // // console.log(add(2, 4));
 
 
-},{"./japanese":1,"./spanish":3}],3:[function(require,module,exports){
-// "use strict";
+},{"./arabic":1,"./chinese":2,"./english":3,"./japanese":4,"./spanish":6}],6:[function(require,module,exports){
+"use strict";
 
-// function Phrase(happy, presidents, day) {
-//     this.happy = happy;
-//     this.presidents = presidents;
-//     this.day = day;
-// }
+function Phrase(happy, presidents, day) {
+    this.happy = happy;
+    this.presidents = presidents;
+    this.day = day;
+}
 
-// var greetingPhrase = document.getElementById("greeting");
+var greetingPhrase = document.getElementById("greeting");
 
-// var userInput = document.getElementById("userInput");
+var userInput = document.getElementById("userInput");
 
-// var greetingSpanish = new Phrase("Feliz", "Presidente", "Dia");
+var greetingSpanish = new Phrase("Feliz", "Presidente", "Dia");
 
-// // console.log("work thanks");
-// function translateSpanish(e){      
-// console.log("success");
-// var   greetingPhrase = "";
-//                 for (var key in greetingSpanish) {
-//                     greetingPhrase += greetingSpanish[key] + " ";
-//                 }
-//                 return greetingPhrase;  
-//             }        
+// console.log("work thanks");
+function translateSpanish(e){      
+console.log("success");
+var   greetingPhrase = "";
+                for (var key in greetingSpanish) {
+                    greetingPhrase += greetingSpanish[key] + " ";
+                }
+                return greetingPhrase;  
+            }        
         
-// var test = "test";
-// var spanishTranslation = translateSpanish();
-// module.exports = spanishTranslation;
+var test = "test";
+var spanishTranslation = translateSpanish();
+module.exports = spanishTranslation;
 
 
 
@@ -206,4 +281,4 @@ document.getElementById("submit-btn").addEventListener("click", checkSelection);
 
 
 
-},{}]},{},[2]);
+},{}]},{},[5]);
