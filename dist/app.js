@@ -205,7 +205,7 @@ function checkSelection(e) {
     }
 
     } else {
-        greetingPhrase.innerHTML = "Enter Something";
+        greetingPhrase.innerHTML = "Enter something real -___-";
     }
 }
 
