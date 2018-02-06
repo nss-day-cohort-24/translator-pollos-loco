@@ -9,6 +9,7 @@ var greetingSpanish = new Phrase("Feliz", "Presidente", "Dia");
 var greetingChinese = new Phrase("快乐", "总统", "天");
 var greetingArabic = new Phrase("السعيدة", "الرئيس", "يوم");
 var greetingJapanese = new Phrase("ハッピー", "大統領の", "日");
+var greetingEnglish = new Phrase("Happy", "President's", "Day");
 
 var greetingPhrase = document.getElementById("greeting");
 
@@ -43,6 +44,13 @@ function checkSelection(e) {
                 greetingPhrase.innerHTML += greetingJapanese[key] + " ";
             }
             break;
+
+        case "english" :
+            greetingPhrase.innerHTML = "";
+            for (key in greetingEnglish) {
+                greetingPhrase.innerHTML += greetingEnglish[key] + " ";
+            }
+            break;    
     }
 }
 
