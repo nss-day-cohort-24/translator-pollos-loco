@@ -67,22 +67,32 @@ function checkSelection(e) {
        
     switch(document.getElementById("language").value) {
         case "spanish" :
+        var speakSpanish = new SpeechSynthesisUtterance(translateToSpanish);
+        window.speechSynthesis.speak(speakSpanish);
         document.getElementById("greeting").innerHTML = translateToSpanish;
             break;
 
         case "chinese" :
+        var speakChinese = new SpeechSynthesisUtterance("Kuàilè de zǒngtǒng rì");
+        window.speechSynthesis.speak(speakChinese);
         document.getElementById("greeting").innerHTML = translateToChinese;
             break;
 
         case "arabic" :
+        var speakArabic = new SpeechSynthesisUtterance("saeidat ruasa' alyawm");
+        window.speechSynthesis.speak(speakArabic);
         document.getElementById("greeting").innerHTML = translateToArabic;
             break;
         
         case "japanese" :
-            document.getElementById("greeting").innerHTML = translateToJapanese;
+        var speakJapanese = new SpeechSynthesisUtterance("Shiawasena daitōryō no hi");
+        window.speechSynthesis.speak(speakJapanese);
+        document.getElementById("greeting").innerHTML = translateToJapanese;
             break;
 
         case "english" :
+        var speakEnglish = new SpeechSynthesisUtterance("Happy Presidents Day");
+        window.speechSynthesis.speak(speakEnglish);
         document.getElementById("greeting").innerHTML = translateToEnglish;
             break;    
     }
@@ -96,4 +106,7 @@ document.getElementById("submit-btn").addEventListener("click", checkSelection);
 
 
 // // console.log(add(2, 4));
+
+
+
 
