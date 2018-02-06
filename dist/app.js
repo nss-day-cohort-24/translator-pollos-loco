@@ -15,6 +15,9 @@ module.exports = chinese;
 console.log("Hello main.js");
 
 let translateToChinese = require("./chinese");
+// Brittany,
+// Hayden,
+// Jeremy
 
 let translator = {
   translateToChinese
@@ -27,7 +30,7 @@ console.log(translator.translateToChinese());
 
 function dropDown() {
     document.getElementById("whichLang").classList.toggle("show");
-};
+}
 
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
